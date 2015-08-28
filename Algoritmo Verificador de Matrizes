@@ -1,0 +1,43 @@
+algoritmo "valoresMatriz"
+var
+mat: vetor[1..4,1..4] de inteiro
+l,c,sDiaPrinc, prod,mai3C:inteiro
+inicio
+   sDiaPrinc<-0
+   prod<-1
+   mai3C<-0
+   para l<-1 ate 4 faca
+     para c<-1 ate 4 faca
+        escreva("Digite um numero para a posicao [",l,",",c,"]")
+        leia(mat[l,c])
+        se (l=c)entao
+          sDiaPrinc<-sDiaPrinc+mat[l,c]
+        fimse
+     fimpara
+   fimpara
+
+   para l<-1 ate 4 faca
+     para c<-1 ate 4 faca
+       escreva(mat[l,c]:4)
+     fimpara
+   escreval()
+   fimpara
+   escreval()
+  
+   para c<-1 ate 4 faca
+     prod<- prod * mat[2,c]//fixei a segunda linha e loopei as colunas dela
+   fimpara
+  
+   para l<-1 ate 4 faca
+     se (mat[l,3]>mai3C) entao //fixei a terceira coluna e loopei as linhas dela
+        mai3C<-mat[l,3]
+     fimse
+   fimpara
+  
+  
+   escreval()
+   escreval("A soma dos valores da Diagonal Principal sera:",sDiaPrinc)
+   escreval("O Produto da segunda linha sera:",prod)
+   escreval("O maior da terceira coluna é:",mai3C)
+  
+fimalgoritmo
