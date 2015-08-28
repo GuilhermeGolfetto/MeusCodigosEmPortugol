@@ -1,0 +1,19 @@
+algoritmo "FuncaoParImpar"
+var
+   n:inteiro
+   r: caractere
+funcao ParOuImpar(V:inteiro):Caractere
+inicio
+      se (v%2 =0) entao
+         retorne "PAR"
+      senao
+           retorne "IMPAR"
+      fimse
+fimfuncao
+inicio
+      escreva("Digite um numero:")
+      leia(n)
+      r <- ParOuImpar(n)
+      escreval("o numero ", n ," e um valor ",r)
+
+fimalgoritmo
