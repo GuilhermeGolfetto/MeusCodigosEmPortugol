@@ -1,0 +1,62 @@
+algoritmo "Verificador de Gabarito"
+var
+gaba: vetor[1..5] de caractere
+aluno: vetor[1..3] de caractere
+resposta: vetor[1..5] de caractere
+nota: vetor[1..3] de real
+media: real
+i,j: inteiro
+
+Procedimento CadastroGabarito()
+var
+c: inteiro
+inicio
+//passo 0 - cadastrar as respostas do gabarito
+Escreval("PASSO 1 - Cadastro de Gabarito")
+escreval("---------------------------------")
+para c<-1 ate 5 faca
+escreva("Questão",c,":")
+leia(gaba[c])
+fimPara
+FimProcedimento
+
+
+//FUNCAO PARA CADASTRAR E COMPARAR AS NOTAS
+Funcao CadastraProva(): Real
+Var
+c:inteiro
+notaFinal:Real
+inicio
+notaFinal<-0
+escreval("RESPOSTAS DADAS")
+para c<-1 ate 5 faca
+escreva("Questao",c,":")
+leia(resposta[c])
+se (resposta[c] = gaba[c]) entao
+notaFinal<-notaFinal+2
+fimSe
+Fimpara
+Retorne notaFinal
+FimFuncao
+
+//INICIO DO PROGRAMA
+inicio
+CadastroGabarito()
+
+Para i<-1 ate 3 faca
+LimpaTela
+escreval("---------------------------------")
+escreval("Aluno ",i)
+escreval("---------------------------------")
+escreva("Nome:")
+leia(aluno[i])
+nota[i] <- CadastraProva()
+FimPara
+
+LimpaTela
+escreval("NOTAS FINAIS")
+escreval("---------------------------------")
+para i<-1 ate 3 faca
+escreval(aluno[i]:10,nota[i])
+fimpara
+fimalgoritmo
