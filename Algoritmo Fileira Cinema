@@ -1,0 +1,101 @@
+algoritmo "Cinema"
+var
+fila: vetor[1..10] de inteiro
+i:inteiro //contador de vetores
+reser:inteiro //escolha do usuario
+confirm:caractere //resposta do usuario se quer ou não continuar
+
+
+procedimento MostraFila()
+inicio
+  para i<-1 ate 10 faca
+    se (fila[i] = 1) entao
+      escreva("[ --- ]")
+    senao
+      escreva("[B",i,"]")
+    fimse
+  fimpara
+escreval()
+escreval("-----------------------------------------------------")
+fimProcedimento
+
+
+procedimento Desicao()
+inicio
+escreva("Reservar a cadeira:B")
+leia(reser)
+escolha(reser) //RESOLVER O PROBLEMA CASO A ESCOLHA JA TENHA SIDO FEITA
+  caso 1
+    se (fila[1] =1) entao
+      escreval("ERRO - Lugar ja ocupado")
+    senao
+      fila[1]<-1
+    fimse
+  caso 2
+    se (fila[2] =1) entao
+      escreval("ERRO - lugar ja ocupado")
+    senao
+      fila[2]<-1
+    fimse
+  caso 3
+    se (fila[3] =1) entao
+      escreval("ERRO - Lugar ja ocupado")
+    senao
+      fila[3]<-1
+    fimse
+  caso 4
+    se (fila[4] =1) entao
+      escreval("ERRO - Lugar ja ocupado")
+    senao
+      fila[4]<-1
+    fimse
+  caso 5
+    se (fila[5] =1) entao
+      escreval("ERRO - Lugar ja ocupado")
+    senao
+      fila[5]<-1
+    fimse
+  caso 6
+    se (fila[6] =1) entao
+      escreval("ERRO - Lugar ja ocupado")
+    senao
+      fila[6]<-1
+    fimse
+  caso 7
+    se (fila[7] =1) entao
+      escreval("ERRO - Lugar ja ocupado")
+    senao
+      fila[7]<-1
+    fimse
+  caso 8
+    se (fila[8] =1) entao
+      escreval("ERRO - Lugar ja ocupado")
+    senao
+      fila[8]<-1
+    fimse
+  caso 9
+    se (fila[9] =1) entao
+      escreval("ERRO - Lugar ja ocupado")
+    senao
+      fila[9]<-1
+    fimse
+  caso 10
+      se (fila[10] =1) entao
+        escreval("ERRO - Lugar ja ocupado")
+      senao
+        fila[10]<-1
+      fimse
+  fimescolha
+escreval("Cadeira B",reser,"Reservada")
+fimProcedimento
+
+inicio
+repita
+    MostraFila()
+    Desicao()
+    escreva("Deseja Continuar:[S/N]")
+    leia(confirm)
+    limpatela
+ate confirm <> "S"
+
+fimalgoritmo
